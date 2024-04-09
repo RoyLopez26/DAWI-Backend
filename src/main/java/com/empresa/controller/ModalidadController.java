@@ -37,10 +37,10 @@ public class ModalidadController {
 
 	@PostMapping
 	@ResponseBody
-	public  ResponseEntity<?> insertaModalidad( @RequestBody Modalidad obj, Errors errors){
+	public  ResponseEntity<?> insertaModalidad( @RequestBody Modalidad obj){
 		Map<String, Object> salida = new HashMap<>();
 		List<String> lstMensajes = new ArrayList<>();
-		salida.put("errores", lstMensajes);
+		salida.put("errors", lstMensajes);
 
 		Modalidad objSalida = modalidadService.insertaActualizaModalidad(obj);
 		if (objSalida == null) {
